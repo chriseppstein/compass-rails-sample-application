@@ -1,0 +1,14 @@
+  [4;36;1mSQL (0.000209)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.012547)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.002359)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000336)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePosts (1)
+  [4;35;1mSQL (0.002621)[0m   [0mCREATE TABLE posts ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT NULL, "body" text DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002203)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000432)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000120)[0m   [0mPRAGMA index_list(posts)[0m
