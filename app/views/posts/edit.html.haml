@@ -1,0 +1,8 @@
+%h2 Editing Post
+
+= render :partial => "form", :locals => {:action_label => "Update"}
+
+= link_to 'Back', posts_path
+|
+=  link_to 'Show', post_path(@post)
+

@@ -1,0 +1,12 @@
+= error_messages_for :post
+
+- form_for(@post) do |f|
+  %p
+    %label{:for => "post_title"} Title
+    %br
+    = f.text_field :title
+  %p
+    %label{:for => "post_body"} Body
+    %br
+    = f.text_area :body
+  %p= f.submit action_label
