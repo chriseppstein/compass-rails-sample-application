@@ -9,7 +9,7 @@
     /[if IE]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     = stylesheet_link_tag 'scaffold'
-  %body
+  %body{body_attributes}
     #container
       %h1 Welcome to Compass
       = yield
