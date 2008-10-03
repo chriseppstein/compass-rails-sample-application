@@ -1,6 +1,6 @@
 @import blueprint/screen
 @import blueprint/modules/scaffolding
-@import compass/reset
+@import compass/reset, compass/utilities
 
 html
   +reset-html
@@ -12,3 +12,13 @@ body
   +blueprint-scaffolding
   #container
     +container
+  &.posts
+    ul#posts,
+    .tools ul
+      +no-bullets
+      :margin 0
+    ul#posts
+      +column(24)
+      li.post
+        +column(24)
+        :margin-top 1em
