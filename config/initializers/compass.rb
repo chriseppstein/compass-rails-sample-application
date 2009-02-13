@@ -1,8 +1,8 @@
 require 'compass'
 # If you have any compass plugins, require them here.
-Sass::Plugin.options[:template_location] = {
-  "#{RAILS_ROOT}/app/stylesheets" => "#{RAILS_ROOT}/public/stylesheets/compiled"
-}
-Compass::Frameworks::ALL.each do |framework|
-  Sass::Plugin.options[:template_location][framework.stylesheets_directory] = "#{RAILS_ROOT}/public/stylesheets/compiled/#{framework.name}"
+Compass.configuration do |config|
+  config.project_path = RAILS_ROOT
+  config.sass_dir = "app/stylesheets"
+  config.css_dir = "public/stylesheets/compiled"
 end
+Compass.configure_sass_plugin!
