@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => "root", :action => "show"
   map.resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
