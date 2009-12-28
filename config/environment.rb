@@ -56,6 +56,6 @@ Rails::Initializer.run do |config|
 
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
-	config.gem 'haml-edge', :version => '>= 2.1.21', :lib => 'haml'
-	config.gem 'chriseppstein-compass', :version => '>= 0.6.13', :lib => 'compass'
+	config.gem 'haml', :version => '>= 2.2.16'
+	config.gem 'compass', :version => '= 0.10.0.pre2'
 end
